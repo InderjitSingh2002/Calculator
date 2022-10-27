@@ -1,0 +1,27 @@
+#root {
+    -fx-padding: 10px;
+    -fx-background-color: #38302E;
+}
+
+#result-field {
+    -fx-pref-width: 300px;
+    -fx-background-radius: 0px;
+    -fx-text-alignment: right;
+    -fx-pref-height: 80px;
+    -fx-font-size: 20px;
+    -fx-background-color: #6F6866;
+    -fx-text-fill: #FEFEFF;
+    -fx-font-family: Monospaced;
+}
+
+Button {
+    -fx-pref-width: 60px;
+    -fx-pref-height: 40px;
+    -fx-background-radius: 0px;
+    -fx-background-color: #6F6866;
+    -fx-font-family: Monospaced;
+}
+
+BorderPane {
+    -fx-pref-height: 300px;
+}

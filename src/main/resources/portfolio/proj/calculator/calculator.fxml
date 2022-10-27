@@ -1,16 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="portfolio.proj.calculator.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+
+<AnchorPane id="root" maxHeight="400.0" maxWidth="300.0" minHeight="400.0" minWidth="300.0" prefHeight="400.0" prefWidth="300.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane layoutX="20.0" layoutY="20.0" prefHeight="353.0" prefWidth="268.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="10.0">
+         <top>
+            <HBox minWidth="-Infinity" prefHeight="100.0" prefWidth="200.0" stylesheets="@style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField id="result-field" fx:id="resultTextField" alignment="CENTER_RIGHT" prefHeight="54.0" prefWidth="446.0" stylesheets="@style.css" />
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <GridPane id="control-grid" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="sevenButton" mnemonicParsing="false" text="7" GridPane.rowIndex="3" />
+                  <Button fx:id="eightButton" layoutX="10.0" layoutY="28.0" mnemonicParsing="false" text="8" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Button fx:id="nineButton" layoutX="121.0" layoutY="28.0" mnemonicParsing="false" text="9" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Button fx:id="oneButton" layoutX="232.0" layoutY="28.0" mnemonicParsing="false" text="1" GridPane.rowIndex="1" />
+                  <Button fx:id="twoButton" layoutX="10.0" layoutY="88.0" mnemonicParsing="false" text="2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Button fx:id="threeButton" layoutX="121.0" layoutY="88.0" mnemonicParsing="false" text="3" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Button fx:id="fourButton" layoutX="232.0" layoutY="88.0" mnemonicParsing="false" text="4" GridPane.rowIndex="2" />
+                  <Button fx:id="fiveButton" layoutX="232.0" layoutY="88.0" mnemonicParsing="false" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button fx:id="sixButton" layoutX="121.0" layoutY="148.0" mnemonicParsing="false" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Button fx:id="zeroButton" layoutX="121.0" layoutY="88.0" mnemonicParsing="false" text="0" GridPane.columnIndex="1" />
+                  <Button fx:id="cButton" layoutX="121.0" layoutY="28.0" mnemonicParsing="false" text="C" />
+                  <Button fx:id="backspaceButton" layoutX="10.0" layoutY="28.0" mnemonicParsing="false" text="Delete" GridPane.columnIndex="2" />
+                  <Button fx:id="addButton" layoutX="232.0" layoutY="28.0" mnemonicParsing="false" text="+" GridPane.columnIndex="3" />
+                  <Button fx:id="subtractButton" layoutX="343.0" layoutY="28.0" mnemonicParsing="false" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Button fx:id="multiplyButton" layoutX="343.0" layoutY="88.0" mnemonicParsing="false" text="*" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Button fx:id="divideButton" layoutX="343.0" layoutY="148.0" mnemonicParsing="false" text="/" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
